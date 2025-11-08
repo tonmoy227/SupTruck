@@ -114,7 +114,6 @@ Last change:    00/00/00
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
 
-			CustomEase.create("ease1", ".645,.045,.355,1");
 
 			let preloader = document.querySelector("#preloader");
 			if (preloader) {
@@ -130,7 +129,41 @@ Last change:    00/00/00
 		})		
 	});
 	
-
+	if ($('.st-spon-slider').length > 0 ) {
+		var slider = new Swiper('.st-spon-slider', {
+			spaceBetween: 0,
+			slidesPerView: 7,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 6,
+				},
+				'1200': {
+					slidesPerView: 6,
+				},
+				'992': {
+					slidesPerView: 5,
+				},
+				'768': {
+					slidesPerView: 3,
+				},
+				'576': {
+					slidesPerView: 3,
+				},
+				'480': {
+					slidesPerView: 2,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	}; 
 
 
 

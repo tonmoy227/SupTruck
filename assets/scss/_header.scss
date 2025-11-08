@@ -1,16 +1,112 @@
+%ofcanvas-trigger{
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	border: none;
+	justify-content: center;
+	transition: all 500ms ease-in-out;
+	@media #{$lg,$md,$sm,$xs} {
+		width: 50px;
+	}
+	button {
+		padding: 0;
+		width: 30px;
+		border: none;
+		height: 30px;
+		background-color: transparent;
+	}
+	span {
+		width: 5px;
+		height: 5px;
+		float: left;
+		margin: 2px;
+		position: relative;
+		border-radius: 50px;
+		display: inline-block;
+		transition: all 500ms ease;
+		background: var(--st-prime-c);
+	}
+	&:hover {
+		background-color: var(--lg-prime-c2);
+		span {
+			background: #000;
+		}
+		span:nth-child(1){
+			transform:translateX(9px);
+		}
+		span:nth-child(2){
+			transform:translateX(9px);
+		}
+		span:nth-child(3){
+			transform:translateY(9px);
+		}
+		span:nth-child(6){
+			transform:translateY(9px);
+		}
+		span:nth-child(9){
+			transform:translateX(-9px);
+		}
+		span:nth-child(8){
+			transform:translateX(-9px);
+		}
+		span:nth-child(7){
+			transform:translateY(-9px);
+		}
+		span:nth-child(4){
+			transform:translateY(-9px);
+		}
+	}
+}
 .st-header-section {
 	top: 0;
 	left: 0;
+	z-index: 10;
 	width: 100%;
 	position: absolute;
 	padding: 24px 24px 12px;
+	@media #{$xxs} {
+		padding: 8px 12px;
+	}
 	.navbar-nav {
 		flex-direction: row;
 	}
+	.st-mobile-menu-btn {
+		display: none;
+		margin-left: 20px;
+		@media #{$md,$sm,$xs,$xxs} {
+			display: block;
+		}
+		button {
+			padding: 0;
+			width: 30px;
+			height: 18px;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: transparent;
+			justify-content: space-between;
+			span {
+				width: 19px;
+				height: 2px;
+				display: block;
+				background-color: var(--st-prime-c);
+				&:nth-child(even) {
+					width: 29px;
+				}
+			}
+		}
+	}
 	.st-header-content {
+		gap: 25px;
 		padding: 16px 24px;
 		border-radius: 12px;
 		background-color: #fff;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			padding: 16px 15px;
+		}
 		.logo-cta {
 			gap: 16px;
 			.brand-logo {
@@ -19,6 +115,10 @@
 			.cta-info {
 				padding-left: 18px;
 				position: relative;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					display: none !important;
+				}
+
 				&:before,
 				&:after {
 					top: 0;
@@ -51,6 +151,9 @@
 			}
 		}
 		.main-navigation {
+			@media #{$md,$sm,$xs,$xxs} {
+				display: none !important;
+			}
 			li {
 				position: relative;
 				transition: all 500ms ease-in-out;
@@ -77,6 +180,9 @@
 					padding: 11px 28px;
 					border-radius: 100px;
 					border: 1px solid #00161A29;
+					@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+						padding: 11px 18px;
+					}
 				}
 				&:hover,
 				&:is(.active) {
@@ -89,6 +195,93 @@
 						border: 1px solid var(--st-prime-c);
 						background-color: var(--st-prime-c);
 					}
+				}
+			}
+		}
+		.st-hd-action {
+			.hd-search {
+				button {
+					padding: 0;
+					width: 52px;
+					border: none;
+					height: 23px;
+					font-size: 14px;
+					color: var(--st-prime-c);
+					background-color: transparent;
+					border-left: 1px solid #D9D9D9;
+					border-right: 1px solid #D9D9D9;
+					@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+						width: auto;
+						border: none;
+					}
+				}
+			}
+			.hd-select {
+				width: 76px;
+				font-size: 12px;
+				font-weight: 600;
+				position: relative;
+				text-align: center;
+				font-family: 'Font Awesome 5 Free';
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+				&:before {
+					top: -2px;
+					right: 5px;
+					font-size: 15px;
+					content: "\f107";
+					position: absolute;
+					color: var(--st-prime-c);
+				}
+				select {
+					border: none;
+					font-size: 12px;
+					color: #000000;
+					appearance: none;
+					font-weight: 500;
+					background-color: transparent;
+					letter-spacing: 2px;
+					option {
+						font-size: 14px;
+					}
+				}
+			}
+			.cta-btn {
+				margin-left: 24px;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					margin-left: 16px;
+				}
+				@media #{$xs,$xxs} {
+					display: none;
+				}
+				a {
+					gap: 16px;
+					font-size: 16px;
+					display: flex;
+					font-weight: 500;
+					align-items: center;
+					border-radius: 6px;
+					justify-content: center;
+					background-color: #EFEFEF;
+					padding: 8px 8px 8px 20px;
+					font-family: var(--st-heading);
+					i {
+						width: 32px;
+						height: 32px;
+						display: flex;
+						border-radius: 4px;
+						align-items: center;
+						justify-content: center;
+						background-color: #00161A;
+					}
+				}
+			}
+			.offcanvas-trigger {
+				margin-left: 22px;
+				@extend%ofcanvas-trigger;
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					display: none;
 				}
 			}
 		}
