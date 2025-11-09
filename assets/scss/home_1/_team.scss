@@ -30,3 +30,144 @@
 		max-width: 510px;
 	}
 }
+.st-team-thumb-area {
+	display: flex;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		justify-content: center;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+
+.st-team-btn-wrap {
+	max-width: 895px;
+	@media #{$xl} {
+		max-width: 750px;
+	}
+	@media #{$lg} {
+		max-width: 500px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		text-align: center;
+	}
+	li {
+		margin-right: 10px;
+		margin-bottom: 16px;
+		&:nth-child(2),
+		&:nth-child(4) {
+			margin-left: 213px;
+			@media #{$xl} {
+				margin-left: 160px;
+			}
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				margin-left: 0;
+			}
+		}
+	}
+	.nav-tabs .nav-link.active,
+	.nav-tabs .nav-link {
+		padding: 0;
+	}
+	.nav-tabs .nav-link.active {
+		.st-team-btn {
+			.item-img {
+				background-color: #FFF4ED;
+				img {
+					mix-blend-mode: normal;
+				}
+			}
+		}
+	}
+}
+
+.st-team-btn {
+	width: 213px;
+	height: 270px;
+	@media #{$xl} {
+		width: 180px;
+	}
+	@media #{$lg} {
+		width: 150px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		width: 210px;
+	}
+	.item-img {
+		background-color: #E7ECEE;
+		transition: all 500ms ease-in-out;
+		img {
+			mix-blend-mode: luminosity;
+		}
+	}
+}
+.st-team-item {
+	z-index: 1;
+	height: 557px;
+	max-width: 484px;
+	.tm-bg {
+		z-index: -1;
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		width: 90%;
+		bottom: 28px;
+		margin: 0 auto;
+		position: absolute;
+		background-color: #fff;
+		.inner-text {
+			@media #{$xxs} {
+				padding-left: 0;
+			}
+		}
+		h3 {
+			font-size: 20px;
+			font-weight: 700;
+			padding-bottom: 5px;
+		}
+		@media #{$xxs} {
+			width: 100%;
+			padding: 20px;
+			gap: 10px 30px;
+			flex-wrap: wrap;
+			position: static;
+		}
+	}
+	.inner-social {
+		width: 100px;
+		height: 100px;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		@media #{$xxs} {
+			width: 100%;
+		}
+		&:before,
+		&:after {
+			top: 50%;
+			width: 100%;
+			height: 1.5px;
+			content: '';
+			opacity: .32;
+			position: absolute;
+			transform: translateY(-50%);
+			background: radial-gradient(50% 50% at 50% 50%, #00161A 0%, #F3F3F3 100%);
+		}
+		&:before {
+			top: auto;
+			left: 50%;
+			width: 1.5px;
+			height: 100%;
+			transform: translateX(-50%);
+			background: radial-gradient(50% 50% at 50% 50%, #00161A 0%, #F3F3F3 100%);
+		}
+		a {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #F3F3F3;
+		}
+	}
+}
