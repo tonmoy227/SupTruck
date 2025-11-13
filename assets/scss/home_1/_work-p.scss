@@ -1,0 +1,103 @@
+.st-wrkp-sec {
+	padding-left: 24px;
+	padding-right: 24px;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.st-sec-title {
+		margin: 0 auto;
+		max-width: 760px;
+		p {
+			margin: 0 auto;
+		}
+	}
+}
+.st-wrkp-content {
+	gap: 8px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.st-wrkp-img {
+	.item-img {
+		border-radius: 16px;
+	}
+}
+.st-wrkp-steps-wrap {
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	max-width: 715px;
+	border-radius: 16px;
+	padding-top: 80px;
+	padding-left: 55px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$xxs} {
+		padding-left: 0px;
+	}
+	.mCSB_scrollTools {
+		top: 0;
+		left: 0;
+		max-height: 400px;
+	}
+	.mCustomScrollBox {
+		padding-left: 80px;
+		@media #{$xxs} {
+			padding-left: 30px;
+		}
+	}
+	.mCSB_scrollTools .mCSB_draggerRail {
+		width: 8px;
+		background-color: #FFFFFF29;
+	}
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		width: 8px;
+		background-color: var(--st-prime-c2);
+	}
+}
+.st-wrkp-item {
+	width: 100%;
+	height: 380px;
+	padding: 12px;
+	max-width: 340px;
+	margin-bottom: 40px;
+	border-radius: 8px;
+	background-color: #EEEEEE;
+	.inner-item {
+		background-color: #FFFFFF;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		border-bottom-left-radius: 63px;
+		border-bottom-right-radius: 63px;
+	}
+	.item-serial {
+		color: #EEEEEE;
+		line-height: .7;
+		font-size: 68px;
+		font-weight: 800;
+		margin-bottom: 32px;
+		border-radius: 8px;
+		font-family: var(--st-heading);
+	}
+	.item-text {
+		h3 {
+			font-size: 20px;
+			font-weight: 600;
+			padding-bottom: 12px;
+		}
+		p {
+			color: #575B59;
+			padding-bottom: 26px;
+		}
+	}
+	.item-img {
+		width: 100%;
+		height: 128px;
+		overflow: hidden;
+		border-radius: 150px;
+	}
+}

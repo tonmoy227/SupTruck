@@ -108,6 +108,24 @@ Last change:    00/00/00
 		fixedContentPos: false,
 	});
 
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right').marquee({
+		gap: 28,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 
 
 	// windows-loaded-before-functions
@@ -165,6 +183,8 @@ Last change:    00/00/00
 		});
 	}; 
 
-
+	$(window).on("load",function(){
+		$(".content").mCustomScrollbar();
+	});
 
 })(jQuery);
