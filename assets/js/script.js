@@ -183,6 +183,60 @@ Last change:    00/00/00
 		});
 	}; 
 
+
+	if ($('.st-testi-slider').length > 0 ) {
+		var slider = new Swiper('.st-testi-slider', {
+			spaceBetween: 28,
+			slidesPerView: 3,
+			loop: true,
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 6000
+			// },
+			speed: 1000,
+			pagination: {
+				el: ".st-testi-pagi",
+				clickable: true,
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 3,
+				},
+				'1300': {
+					slidesPerView: 2,
+				},
+				'1200': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'992': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'992': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'768': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+			},
+		});
+	};
+
 	$(window).on("load",function(){
 		$(".content").mCustomScrollbar();
 	});

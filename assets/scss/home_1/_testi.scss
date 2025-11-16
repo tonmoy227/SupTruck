@@ -1,6 +1,9 @@
 .st-testi-sec {
 	margin-top: 8px;
 	padding: 0px 24px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		padding: 0px 10px;
+	}
 }
 .st-testi-content {
 	z-index: 1;
@@ -23,42 +26,90 @@
 	}
 }
 .st-testi-item {
-	gap: 30px 48px;
-	max-width: 870px;
-	padding: 22px 24px;
 	border-radius: 24px;
 	background: radial-gradient(100% 390.96% at 100% 100%, #FFFFFF 0%, #FFE3D7 50%, #FFFFFF 100%);
-	mix-blend-mode: luminosity;
-	.item-img {
-		width: 240px;
-		height: 364px;
-		overflow: hidden;
-		border-radius: 12px;
-		background-color: #FDD3C1;
+	.inner-wrap {
+		z-index: 1;
+		gap: 30px 48px;
+		max-width: 870px;
+		padding: 22px 24px;
+		position: relative;
+		mix-blend-mode: luminosity;
+		@media #{$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+		}
+		.item-img {
+			width: 240px;
+			height: 364px;
+			overflow: hidden;
+			border-radius: 12px;
+			background-color: #FDD3C1;
+		}
+		.item-text {
+			display: flex;
+			max-width: 502px;
+			flex-direction: column;
+			justify-content: space-between;
+			li {
+				font-size: 14px;
+				color: var(--st-prime-c);
+			}
+			p {
+				font-size: 23px;
+				padding-top: 20px;
+				font-style: italic;
+				letter-spacing: -.5px;
+			}
+		}
+		.item-auth {
+			h3 {
+				font-size: 18px;
+				font-weight: 600;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
 	}
-	.item-text {
-		display: flex;
-		max-width: 502px;
-		flex-direction: column;
-		justify-content: space-between;
-		li {
-			font-size: 14px;
-			color: var(--st-prime-c);
-		}
-		p {
-			font-size: 23px;
-			padding-top: 20px;
-			font-style: italic;
-			letter-spacing: -.5px;
-		}
+}
+.st-testi-slider {
+	width: 145%;
+	margin-left: -350px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		margin-left: 0px;
 	}
-	.item-auth {
-		h3 {
-			font-size: 18px;
-			font-weight: 600;
+}
+.swiper-slide-active {
+	.st-testi-item {
+		opacity: 1;
+	}	
+}
+.st-testi-pagi {
+	.swiper-pagination-bullet {
+		width: 24px;
+		height: 24px;
+		opacity: 1;
+		position: relative;
+		border: 1px solid transparent;
+		background-color: transparent;
+		transition: all 500ms ease-in-out;
+		&:before {
+			top: 8px;
+			left: 8px;
+			width: 	6px;
+			height: 6px;
+			content: '';
+			border-radius: 100%;
+			position: absolute;
+			transition: all 500ms ease-in-out;
+			background-color: rgba(255, 255, 255, .32);
 		}
-		span {
-			font-size: 14px;
+		&:is(.swiper-pagination-bullet-active) {
+			border: 1px solid var(--st-prime-c2);
+			&:before {
+				background-color: var(--st-prime-c2);
+			}	
 		}
 	}
 }

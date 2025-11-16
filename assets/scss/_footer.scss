@@ -1,0 +1,149 @@
+.st-footer-sec {
+	background-color: #00161A;
+}
+.ed-footer6-widget-area {
+	width: 100%;
+	max-width: 780px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		max-width: 700px;
+	}
+	.ed-footer6-widget-cont {
+		@media #{$xs,$xxs} {
+			gap: 30px;
+			flex-wrap: wrap;
+		}
+	}
+}
+.ed-footer-1-menu li .has-dropdown {
+	padding-top: 14px;
+	padding-left: 20px;
+	display: none;
+}
+.ed-footer6-widget {
+	.logo-widget {
+		max-width: 420px;
+		p {
+			color: #fff;
+			padding-bottom: 42px;
+		}
+		.brand-logo {
+			margin-bottom: 20px;
+		}
+		.logo-social {
+			gap: 14px;
+			display: flex;
+			a {
+				width: 52px;
+				height: 52px;
+				display: flex;
+				color: #FFFFFF;
+				border-radius: 100%;
+				align-items: center;
+				justify-content: center;
+				background-color: #212227;
+				&:hover {
+					background-color: var(--ed-prime-c9);
+				}
+			}
+		}
+	}
+}
+.ed-footer5-widget {
+	margin-bottom: 30px;
+	@media #{$xxs} {
+		width: 100%;
+	}
+	.widget-title {
+		color: var(--lg-prime-c2);
+		font-size: 16px;
+		font-weight: 500;
+		padding-bottom: 20px;
+	}
+	.ed-ft-img {
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
+	}
+	.menu-widget {
+		li {
+			font-weight: 500;
+			margin-bottom: 12px;
+			font-family: var(--ed-heading-2);
+			a {
+				color: rgba(255, 255, 255, .8);
+				position: relative;
+				&:hover {
+					color: #FFDA8A;
+					transform: translateX(5px);
+				}
+			}
+			&:is(.dropdown) {
+				a {
+					&:before {
+						top: 3px;
+						color: rgba(255, 255, 255, .8);
+						right: -16px;
+						font-size: 12px;
+						content: '\f078';
+						font-weight: 700;
+						position: absolute;
+						font-family: 'Font Awesome 6 Free';
+					}
+				}
+			}
+			.has-dropdown {
+				padding-left: 0;
+				a {
+					font-size: 16px;
+					color: rgba(255, 255, 255, 1);
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.menu-widget-2 {
+		li {
+			margin-bottom: 12px;
+			a {
+				padding-left: 14px;
+				position: relative;
+				color: rgba(255, 255, 255, .8);
+				&:before {
+					left: 0;
+					top: 10px;
+					width: 6px;
+					height: 6px;
+					content: '';
+					position: absolute;
+					border-radius: 100%;
+					background-color: #fff;
+				}
+				&:hover {
+					color: #FFDA8A;
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+	.cta-widget {
+		max-width: 260px;
+		.cta-info-item {
+			gap: 10px;
+			margin-bottom: 12px;
+			.item-icon {
+				width: 20px;
+				font-size: 16px;
+				margin-top: 3px;
+				i {
+					color: var(--lg-prime-c);
+				}
+			}
+			.item-text {
+				max-width: 224px;
+				color: rgba(255, 255, 255, .80);
+			}
+		}
+	}
+} 
