@@ -175,24 +175,7 @@ Last change:    00/00/00
 			e.stopPropagation();
 		})
 	});
-	if($('.st-split-1').length) {
-		var txtSplit = $('.st-split-1');
-		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
-			el.split = new SplitText(el, { 
-				type: "lines",
-				linesClass: "split-line"
-			});
-		});
-	}
-	if($('.st-split-2').length) {
-		var txtSplit = $('.st-split-2');
-		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
-			el.split = new SplitText(el, { 
-				type: "lines,words",
-				linesClass: "split-line"
-			});
-		});
-	}
+
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -219,6 +202,24 @@ Last change:    00/00/00
 					},
 				}); 
 			}, 700);
+			if($('.st-split-1').length) {
+				var txtSplit = $('.st-split-1');
+				if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+					el.split = new SplitText(el, { 
+						type: "lines",
+						linesClass: "split-line"
+					});
+				});
+			}
+			if($('.st-split-2').length) {
+				var txtSplit = $('.st-split-2');
+				if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+					el.split = new SplitText(el, { 
+						type: "lines,words",
+						linesClass: "split-line"
+					});
+				});
+			}
 		})		
 	});
 	if($('.tx-split-text').length) {
