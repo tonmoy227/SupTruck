@@ -104,9 +104,14 @@
 .st-team-item {
 	z-index: 1;
 	height: 557px;
+	overflow: hidden;
 	max-width: 484px;
 	.tm-bg {
 		z-index: -1;
+	}
+	.item-img {
+		transform: translateY(100%);
+		transition: all 800ms ease-in-out;
 	}
 	.item-text {
 		left: 0;
@@ -116,6 +121,9 @@
 		margin: 0 auto;
 		position: absolute;
 		background-color: #fff;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: all 800ms ease-in-out;
 		.inner-text {
 			@media #{$xxs} {
 				padding-left: 0;
@@ -168,6 +176,16 @@
 			align-items: center;
 			justify-content: center;
 			background-color: #F3F3F3;
+			&:hover {
+				color: #fff;
+				background-color: var(--st-prime-c);
+			}
 		}
 	}
+}
+.st-team-tab-desc .tab-pane:is(.show) .st-team-item .item-img {
+	transform: translateY(0%);
+}
+.st-team-tab-desc .tab-pane:is(.show) .st-team-item .item-text {
+	transform: scaleY(1);
 }

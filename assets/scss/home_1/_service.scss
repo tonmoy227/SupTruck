@@ -3,8 +3,21 @@
 		margin: 0 auto;
 		max-width: 760px;
 	}
+	.st-btn {
+		a {
+			&:before {
+				background-color: var(--st-title-color);
+			}
+		}
+	}
 }
-
+@keyframes swing {
+	20% { transform: rotate(15deg); }	
+	40% { transform: rotate(-10deg); }
+	60% { transform: rotate(5deg); }	
+	80% { transform: rotate(-5deg); }	
+	100% { transform: rotate(0deg); }
+}
 .st-ser-item {
 	gap: 30px;
 	overflow: hidden;
@@ -16,6 +29,10 @@
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 		justify-content: space-between;
+	}
+	.item-img {
+		transform-origin: top center;
+		
 	}
 	.item-text {
 		max-width: 350px;
@@ -33,7 +50,15 @@
 				i {
 					background-color: var(--st-title-color);
 				}
+				&:hover {
+					color: #fff;
+				}
 			}
+		}
+	}
+	&:hover {
+		.item-img {
+			animation: swing 2s ease infinite;
 		}
 	}
 }

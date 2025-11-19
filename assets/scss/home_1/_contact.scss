@@ -81,6 +81,7 @@
 			padding: 10px 10px 10px 20px;
 			font-family: var(--st-heading);
 			background-color: var(--st-prime-c);
+			transition: all 500ms ease-in-out;
 			i {
 				width: 32px;
 				height: 32px;
@@ -89,6 +90,9 @@
 				align-items: center;
 				justify-content: center;
 				background-color: #fff;
+			}
+			&:hover {
+				background-color: var(--st-title-color);
 			}
 		}
 	}

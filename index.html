@@ -23,10 +23,19 @@
   <body class="home-1">
   	<div id="preloader">
   		<div class="preloader-logo">
-  			<a href="#"><img src="assets/img/logo/logo-black.svg" alt=""></a>
+  			<svg width="157" height="149" viewBox="0 0 157 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+  				<path d="M102.996 75.9428L154.808 40.9234L92.5497 0L40.7382 35.0193L102.996 75.9428Z" fill="#FF7D44"/>
+  				<path d="M114.692 117.209C112.094 118.087 109.425 118.888 106.701 119.615L106.834 149L155.766 115.628V105.646L115.045 134.349L114.692 117.209Z" fill="#FAC12E"/>
+  				<path d="M106.514 78.9594L106.599 97.582C109.272 96.6523 111.853 95.6339 114.326 94.5403V83.982L155.766 56.3558V45.5622L106.514 78.9594Z" fill="#FAC12E"/>
+  				<path d="M82.3889 103.258C88.833 102.41 95.1286 101.079 101.079 99.3449V78.8224L36.7958 37.5654V98.2243C45.1437 102.115 54.643 104.367 66.6633 104.367C71.5104 104.367 76.8011 103.995 82.3889 103.258Z" fill="#FF7D44"/>
+  				<path d="M71.7901 124.369C68.758 124.369 65.859 124.236 63.0739 123.993L101.077 148.383V120.988C96.9745 121.9 92.7639 122.649 88.4646 123.216C82.6647 123.981 77.0538 124.369 71.7901 124.369Z" fill="#FF7D44"/>
+  				<path d="M122.174 88.5918L125.26 94.3416C114.175 100.861 99.4818 105.843 83.0157 108.013C50.0081 112.364 32.1107 104.032 14.1728 88.8734C12.6877 87.6197 9.4627 84.3658 8.17041 82.9134L0 73.553C0 73.553 5.97543 84.5452 11.9161 91.6259C27.8114 110.042 48.5441 123.64 87.8377 118.461C104.449 116.272 119.341 111.358 130.808 104.904L133.402 109.506L156.551 83.3995L122.174 88.5918Z" fill="#FAC12E"/>
+  			</svg>
   		</div>
   	</div>
-
+  	<div class="st-up">
+  		<a href="#" class="st-scrollup text-center">TOP</a>
+  	</div>
 <!-- Start of Header section
 	============================================= -->
 	<header id="st-header" class="st-header-section header_style_one txa_sticky_header">
@@ -72,7 +81,7 @@
 			</nav>
 			<div class="st-hd-action d-flex align-items-center">
 				<div class="hd-search">
-					<button><i class="fa-solid fa-magnifying-glass"></i></button>
+					<button class="search_btn_toggle"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</div>
 				<div class="hd-select">
 					<select>
@@ -110,20 +119,225 @@
 			</div>
 		</div>
 	</header>
+	<div class="txa-search-box search_box_active ">
+		<div class="txa-search-container">
+			<div class="txa-search-wrap headline-2 text-center headline mb-55">
+				<h5 class="txa-search-title">Search</h5>
+				<form action="#" class="txa-search-form">
+					<input class="txa-search-form-input" type="text" placeholder="What are you looking for?...">
+				</form>
+			</div>
+
+			<div class="txa-search-tag-wrap headline-2 headline text-center">
+				<h6 class="txa-search-tag-title">People also search for:</h6>
+				<div class="txa-search-tag d-inline-flex flex-wrap  ">
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Corporate</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Business</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Consulting</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Finance</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Reports</a>
+				</div>
+			</div>
+		</div>
+
+		<button aria-label="search-close" type="button" class="txa-search-box-close search_box_close">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	<!-- Mobile-start -->
+	<div class="mobile_menu lenis lenis-smooth ofcanvas_sidebar position-relative">
+		<div class="mobile_menu_wrap">
+			<div class="mobile_menu_overlay open_mobile_menu"></div>
+			<div class="mobile_menu_content">
+				<div class="mobile_menu_close open_mobile_menu">
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="m-brand-logo">
+					<a href="#"><img src="assets/img/logo/logo-1.svg" alt=""></a> 
+				</div>
+				<div class="mobile-search-bar position-relative">
+					<form action="#">
+						<input type="text" name="search" placeholder="Keywords">
+						<button><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<nav class="mobile-main-navigation  clearfix ul-li">
+					<ul id="m-main-nav" class="nav navbar-nav clearfix">
+						<li class="dropdown active">
+							<a href="!#">Home</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a class="active" href="index.html">Home Page 1</a></li>
+								<li><a href="index-2.html">Home Page 2</a></li>
+								<li><a href="index-3.html">Home Page 3</a></li>
+								<li><a href="index-4.html">Home Page 4</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Solutions</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="dropdown">
+							<a href="!#">Pages</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a href="service.html">Services</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Services Details</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction </a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="team.html">Team Page</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Blog</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction</a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="faq.html">FAQ Page</a></li>
+								<li><a href="pricing.html">Pricing Page</a></li>
+								<li><a href="testimonial.html">Testimonial Page</a></li>
+								<li><a href="contact.html">Contact Page</a></li>
+								<li><a href="booking.html">Booking Page</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="!#">Shop</a>
+							<ul class="dropdown-menu clearfix"> 
+								<li><a href="shop.html">Shop Page </a></li>
+								<li><a href="shop-single.html">Shop Details</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="ptx-mobile-header-social text-center">
+					<a href="#"> <i class="fab fa-instagram"></i></a>
+					<a href="#"> <i class="fab fa-linkedin-in"></i></a>
+					<a href="#"> <i class="fab fa-facebook"></i></a>
+					<a href="#"> <i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- /Mobile-Menu -->
+	</div>
+	<!-- Sidebar sidebar Item -->
+	<div class="xs-sidebar-group info-group">
+		<div class="xs-overlay xs-bg-black">
+			<div class="row loader-area">
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="xs-sidebar-widget">
+			<div class="sidebar-widget-container">
+				<div class="widget-heading">
+					<a href="#" class="close-side-widget close-side-widget">
+						X
+					</a>
+				</div>
+				<div class="sidebar-textwidget">
+
+					<div class="sidebar-info-contents headline pera-content">
+						<div class="content-inner headline-2">
+							<div class="logo">
+								<a href="index.html"><img src="assets/img/logo/logo2.svg" alt=""></a>
+							</div>
+							<div class="content-box">
+								<h5>About Us</h5>
+								<p class="text">The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
+							</div>
+							<div class="gallery-box ul-li">
+								<h5>Gallery</h5>
+								<ul class="zoom-gallery">
+									<li><a href="assets/img/hero/hr1.jpg" data-source="assets/img/hero/hr1.jpg"><img src="assets/img/hero/hr1.jpg" alt=""></a></li>
+									<li><a href="assets/img/hero/hr2.jpg" data-source="assets/img/hero/hr2.jpg"><img src="assets/img/hero/hr2.jpg" alt=""></a></li>
+									<li><a href="assets/img/hero/hr3.jpg" data-source="assets/img/hero/hr3.jpg"><img src="assets/img/hero/hr3.jpg" alt=""></a></li>
+									<li><a href="assets/img/hero/hr4.jpg" data-source="assets/img/hero/hr4.jpg"><img src="assets/img/hero/hr4.jpg" alt=""></a></li>
+									<li><a href="assets/img/hero/hr1.jpg" data-source="assets/img/hero/hr1.jpg"><img src="assets/img/hero/hr1.jpg" alt=""></a></li>
+									<li><a href="assets/img/hero/hr2.jpg" data-source="assets/img/hero/hr2.jpg"><img src="assets/img/hero/hr2.jpg" alt=""></a></li>
+								</ul>
+							</div>
+							<div class="content-box">
+								<h5>Social Account</h5>
+								<ul class="social-box">
+									<li><a href="https://www.facebook.com/" class="fab fa-facebook-f"></a></li>
+									<li><a href="https://www.twitter.com/" class="fab fa-twitter"></a></li>
+									<li><a href="https://dribbble.com/" class="fab fa-dribbble"></a></li>
+									<li><a href="https://www.linkedin.com/" class="fab fa-linkedin"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- Start of Header section
 	============================================= -->
 
 <!-- Start of Hero section
 	============================================= -->
 	<section id="st-hero" class="st-hero-sec position-relative over-hidden">
-		<div class="st-hero-slider">
+		<div class="st-hero-slider swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="st-hero-item position-relative">
 						<div class="item-img position-absolute img-cover"><img src="assets/img/hero/hr1.jpg" alt=""></div>
 						<div class="container">
 							<div class="st-hero-text headline pera-content">
-								<h1 class="hero_text">Optimizing Supply Chains for a Smarter Tomorrow.</h1>
+								<h1 class="hero_text st-split-1">Optimizing Supply Chains for a Smarter Tomorrow.</h1>
+								<p>Empowering businesses with efficient logistics, real-time visibility, and seamless supply chain solutions that driver.</p>
+								<div class="st-btn mt-35">
+									<a href="#">
+										<span>Get Started</span>
+										<i><img src="assets/img/icon/ic2.svg" alt=""></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="st-hero-item position-relative">
+						<div class="item-img position-absolute img-cover"><img src="assets/img/hero/hr2.jpg" alt=""></div>
+						<div class="container">
+							<div class="st-hero-text headline pera-content">
+								<h1 class="hero_text st-split-1">Optimizing Supply Chains for a Smarter Tomorrow.</h1>
+								<p>Empowering businesses with efficient logistics, real-time visibility, and seamless supply chain solutions that driver.</p>
+								<div class="st-btn mt-35">
+									<a href="#">
+										<span>Get Started</span>
+										<i><img src="assets/img/icon/ic2.svg" alt=""></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="st-hero-item position-relative">
+						<div class="item-img position-absolute img-cover"><img src="assets/img/hero/hr3.jpg" alt=""></div>
+						<div class="container">
+							<div class="st-hero-text headline pera-content">
+								<h1 class="hero_text st-split-1">Optimizing Supply Chains for a Smarter Tomorrow.</h1>
 								<p>Empowering businesses with efficient logistics, real-time visibility, and seamless supply chain solutions that driver.</p>
 								<div class="st-btn mt-35">
 									<a href="#">
@@ -174,8 +388,8 @@
 <!-- Start of About section
 	============================================= -->
 	<section id="st-about" class="st-about-sec position-relative over-hidden">
-		<div class="at-ab1-img position-absolute"><img src="assets/img/about/ab2.png" alt=""></div>
-		<div class="at-ab2-img position-absolute"><img src="assets/img/about/ab1.png" alt=""></div>
+		<div class="at-ab1-img rotate_view position-absolute"><img src="assets/img/about/ab2.png" alt=""></div>
+		<div class="at-ab2-img left_view position-absolute"><img src="assets/img/about/ab1.png" alt=""></div>
 		<div class="at-ab3-img position-absolute"><img src="assets/img/about/map.png" alt=""></div>
 		<div class="container">
 			<div class="st-about-content">
@@ -186,7 +400,7 @@
 							<span>About Us</span>
 							<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 						</div>
-						<h2 class="sec_title">
+						<h2 class="sec_title  tx-split-text split-in-up">
 							Building Smarter, Stronger, 
 							and Sustainable Global Supply Chain Solutions.
 						</h2>
@@ -224,16 +438,16 @@
 					<span>Our Services</span>
 					<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 				</div>
-				<h2 class="sec_title">
+				<h2 class="sec_title  tx-split-text split-in-up">
 					Comprehensive Supply Chain Management Solutions
 				</h2>
 			</div>
 			<div class="st-ser-content mt-50">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-6 wow slideInUp" data-wow-delay="150ms" data-wow-duration="1200ms">
 						<div class="st-ser-item d-flex align-items-center">
 							<div class="item-text headline pera-content">
-								<h3><a href="#">Supply Chain Management</a></h3>
+								<h3 class="href-underline"><a href="#">Supply Chain Management</a></h3>
 								<p>Streamline your operations with integrated planning, execution, and performance analytics.</p>
 								<div class="st-btn ver_2 mt-70">
 									<a href="#">
@@ -247,10 +461,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 wow slideInUp" data-wow-delay="250ms" data-wow-duration="1200ms">
 						<div class="st-ser-item d-flex align-items-center">
 							<div class="item-text headline pera-content">
-								<h3><a href="#">Logistics & Distribution</a></h3>
+								<h3 class="href-underline"><a href="#">Logistics & Distribution</a></h3>
 								<p>End-to-end transportation and warehousing solutions for global and local networks.</p>
 								<div class="st-btn ver_2 mt-70">
 									<a href="#">
@@ -264,10 +478,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 wow slideInUp" data-wow-delay="350ms" data-wow-duration="1200ms">
 						<div class="st-ser-item d-flex align-items-center">
 							<div class="item-text headline pera-content">
-								<h3><a href="#">Procurement Solutions</a></h3>
+								<h3 class="href-underline"><a href="#">Procurement Solutions</a></h3>
 								<p>Optimize sourcing and supplier relationships with smart procurement strategies.</p>
 								<div class="st-btn ver_2 mt-70">
 									<a href="#">
@@ -281,10 +495,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 wow slideInUp" data-wow-delay="450ms" data-wow-duration="1200ms">
 						<div class="st-ser-item d-flex align-items-center">
 							<div class="item-text headline pera-content">
-								<h3><a href="#">Data & Analytics</a></h3>
+								<h3 class="href-underline"><a href="#">Data & Analytics</a></h3>
 								<p>Unlock insights through AI-powered dashboards for data-driven decision-making.</p>
 								<div class="st-btn ver_2 mt-70">
 									<a href="#">
@@ -315,7 +529,7 @@
 <!-- Start of Solution section
 	============================================= -->
 	<section id="st-solution" class="st-solution-sec over-hidden pb-100 position-relative">
-		<span class="st-sol-img position-absolute"><img src="assets/img/about/sl.png" alt=""></span>
+		<span class="st-sol-img top_view position-absolute"><img src="assets/img/about/sl.png" alt=""></span>
 		<div class="container">
 			<div class="st-solution-text">
 				<div class="st-sec-title headline pera-content">
@@ -324,7 +538,7 @@
 						<span>Statistics</span>
 						<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 					</div>
-					<h2 class="sec_title">
+					<h2 class="sec_title  tx-split-text split-in-up">
 						Proven Performance Metrics Worldwide.
 					</h2>
 				</div>
@@ -460,7 +674,7 @@
 						<span>Team Member</span>
 						<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 					</div>
-					<h2 class="sec_title">
+					<h2 class="sec_title  tx-split-text split-in-up">
 						Meet Our Dedicated Supply Chain Experts Driving Global Success.
 					</h2>
 				</div>
@@ -667,19 +881,19 @@
 
 <!-- Start of Work Process section 
 	============================================= -->
-	<section id="st-wrkp" class="st-wrkp-sec pt-125">
+	<section id="st-wrkp" class="st-wrkp-sec over-hidden pt-125">
 		<div class="st-sec-title text-center headline pera-content">
 			<div class="subtitle d-flex justify-content-center align-items-center">
 				<i><img src="assets/img/icon/ic3.svg" alt=""></i>
 				<span>Work Process</span>
 				<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 			</div>
-			<h2 class="sec_title">
+			<h2 class="sec_title  tx-split-text split-in-up">
 				Our Streamlined Supply Chain Process Explained Clearly.
 			</h2>
 			<p>We simplify complex supply chains through smart planning, seamless execution, and continuous optimization for efficiency.</p>
 		</div>
-		<div class="st-wrkp-content d-flex mt-50">
+		<div class="st-wrkp-content d-flex mt-50 workp">
 			<div class="st-wrkp-steps-wrap d-flex justify-content-center" data-background="assets/img/about/wp-bg.jpg">
 				<div class="content">
 					<div class="st-wrkp-item text-center">
@@ -760,7 +974,7 @@
 							<span>Why Choose Us</span>
 							<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 						</div>
-						<h2 class="sec_title">
+						<h2 class="sec_title  st-split-2">
 							Why Choose Subtruck Supply Chain Solutions
 						</h2>
 					</div>
@@ -774,23 +988,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="st-wc-img img-cover">
+				<div class="st-wc-img img-parallax img-cover">
 					<img src="assets/img/about/wc1.jpg" alt="">
 				</div>
 				<div class="st-wc-list-area">
-					<div class="st-wc-list headline pera-content">
+					<div class="st-wc-list headline pera-content wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1200ms">
 						<h3>Advanced Technology</h3>
 						<p>We leverage cutting-edge technology and automation to enhance efficiency, visibility, and accuracy across every supply chain operation.</p>
 					</div>
-					<div class="st-wc-list headline pera-content">
+					<div class="st-wc-list headline pera-content wow fadeInUp" data-wow-delay="250ms" data-wow-duration="1200ms">
 						<h3>Expert Team</h3>
 						<p>Our skilled professionals bring deep industry knowledge & experience to deliver reliable, customized supply chain solutions.</p>
 					</div>
-					<div class="st-wc-list headline pera-content">
+					<div class="st-wc-list headline pera-content wow fadeInUp" data-wow-delay="350ms" data-wow-duration="1200ms">
 						<h3>Global Network</h3>
 						<p>We operate through an extensive global network ensuring smooth, efficient, and timely delivery across multiple regions worldwide.</p>
 					</div>
-					<div class="st-wc-list headline pera-content">
+					<div class="st-wc-list headline pera-content wow fadeInUp" data-wow-delay="450ms" data-wow-duration="1200ms">
 						<h3>Sustainability</h3>
 						<p>We prioritize eco-friendly practices, reducing carbon footprint and promoting sustainable growth throughout our entire supply chain process.</p>
 					</div>
@@ -822,7 +1036,7 @@
 					<span>Testimonials</span>
 					<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 				</div>
-				<h2 class="sec_title">
+				<h2 class="sec_title  tx-split-text split-in-up">
 					What Our Clients Say About Our Supply Chain Expertise
 				</h2>
 			</div>
@@ -940,7 +1154,8 @@
 
 <!-- Start of Blog section 
 	============================================= -->
-	<section id="st-blog" class="st-blog-sec pt-125">
+	<section id="st-blog" class="st-blog-sec over-hidden position-relative pt-125">
+		<span class="st-blg-shape top_view_2 position-absolute"><img src="assets/img/about/blg-s.png" alt=""></span>
 		<div class="container">
 			<div class="st-sec-title  headline pera-content">
 				<div class="subtitle d-flex  align-items-center">
@@ -948,7 +1163,7 @@
 					<span>Team Member</span>
 					<i><img src="assets/img/icon/ic4.svg" alt=""></i>
 				</div>
-				<h2 class="sec_title">
+				<h2 class="sec_title  tx-split-text split-in-up">
 					Insights and Innovations in Supply Chain Management.
 				</h2>
 			</div>
@@ -964,7 +1179,7 @@
 									<span class="item_tag"><a href="#">Supply</a></span>
 									<a class="item_date" href="#"><i class="fa-solid fa-calendar"></i> October 16, 2025</a>
 								</div>
-								<h3 class="blg_title"><a href="#">How Automation Enhances Supply Chain Efficiency ...</a></h3>
+								<h3 class="blg_title href-underline"><a href="#">How Automation Enhances Supply Chain Efficiency ...</a></h3>
 							</div>
 						</div>
 					</div>
@@ -978,7 +1193,7 @@
 									<span class="item_tag"><a href="#">Supply</a></span>
 									<a class="item_date" href="#"><i class="fa-solid fa-calendar"></i> October 16, 2025</a>
 								</div>
-								<h3 class="blg_title"><a href="#">Sustainable Practices Shaping Modern Supply Chains ...</a></h3>
+								<h3 class="blg_title href-underline"><a href="#">Sustainable Practices Shaping Modern Supply Chains ...</a></h3>
 							</div>
 						</div>
 					</div>
@@ -992,12 +1207,12 @@
 									<span class="item_tag"><a href="#">Supply</a></span>
 									<a class="item_date" href="#"><i class="fa-solid fa-calendar"></i> October 16, 2025</a>
 								</div>
-								<h3 class="blg_title"><a href="#">The Future of Smart Supply Chain Technology ...</a></h3>
+								<h3 class="blg_title href-underline"><a href="#">The Future of Smart Supply Chain Technology ...</a></h3>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="st-blog-more mt-40 position-relative">
+				<div class="st-blog-more mt-40 position-relative over-hidden">
 					<div class="st-blog-shape marquee-left">
 						<span><img src="assets/img/about/line-shape.svg" alt=""></span>
 						<span><img src="assets/img/about/line-shape.svg" alt=""></span>
@@ -1018,7 +1233,7 @@
 <!-- Start of Contact section 
 	============================================= -->
 	<section id="st-cont" class="st-cont-sec pt-110">
-		<div class="st-cont-marquee marquee-right">
+		<div class="st-cont-marquee marquee-right over-hidden">
 			<h2>Let’s Talk</h2>
 			<i class="fa-solid fa-arrow-right"></i>
 			<h2>Let’s Talk</h2>
@@ -1028,8 +1243,8 @@
 			<h2>Let’s Talk</h2>
 			<i class="fa-solid fa-arrow-right"></i>
 		</div>
-		<div class="st-cont-content pt-80 pb-130 position-relative">
-			<div class="st-cont-bg img-cover position-absolute"><img src="assets/img/about/cnt-bg.png" alt=""></div>
+		<div class="st-cont-content over-hidden pt-80 pb-130 position-relative">
+			<div class="st-cont-bg img-cover img-parallax position-absolute"><img src="assets/img/about/cnt-bg.png" alt=""></div>
 			<div class="st-cont-form">
 				<form action="#" method="post">
 					<div class="row">
@@ -1069,14 +1284,15 @@
 
 <!-- Start of Footer section 
 	============================================= -->
-	<footer id="st-footer" class="st-footer-sec pt-125">
+	<footer id="st-footer" class="st-footer-sec over-hidden pt-125">
 		<div class="container">
 			<div class="lg-ft-widget-area pb-60 d-flex justify-content-between">
 				<div class="lg-ft-widget">
-					<div class="logo-widget">
-						<div class="brand-logo">
+					<div class="logo-widget pera-content">
+						<div class="brand-logo mb-35">
 							<a href="#"><img src="assets/img/logo/logo2.svg" alt=""></a>
 						</div> 
+						<p>We deliver innovative, efficient, & technology-driven supply chain solutions ensuring seamless global operations.</p>
 					</div>
 				</div>
 				<div class="ed-footer6-widget-area">
@@ -1178,9 +1394,31 @@
 					</div>
 				</div>
 			</div>
+			<div class="st-ftr-copyright d-flex justify-content-between align-items-center">
+				<div class="ftr-social">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-x-twitter"></i> </a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+				<div class="ftr-devider">
+					<i></i>
+				</div>
+				<div class="ftr-copy-text">
+					<span>© 2025,</span> <a href="#">Suptruck - Supply Chain.</a> <span>All Rights Reserved.</span>
+				</div>
+			</div>
 		</div>
-	</div>
-</footer>
+		<div class="st-ftr-text headline text-uppercase">
+			<h2 class="wow slideInUp" data-wow-delay="150ms" data-wow-duration="1200ms">Suptruck</h2>
+			<div class="st-ftr-border">
+				<span class="wow slideInUp" data-wow-delay="250ms" data-wow-duration="1200ms"></span>
+				<span class="wow slideInUp" data-wow-delay="350ms" data-wow-duration="1200ms"></span>
+				<span class="wow slideInUp" data-wow-delay="450ms" data-wow-duration="1200ms"></span>
+				<span class="wow slideInUp" data-wow-delay="550ms" data-wow-duration="1200ms"></span>
+			</div>
+		</div>
+	</footer>
 <!-- End of Footer section 
 	============================================= -->	
 
@@ -1208,6 +1446,8 @@
 	<script src="assets/js/ScrollTrigger.min.js"></script>
 	<script src="assets/js/SplitText.min.js"></script>
 	<script src="assets/js/script.js"></script>
+
+
 
 </body>
 </html>     

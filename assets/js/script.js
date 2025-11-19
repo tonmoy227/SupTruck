@@ -84,6 +84,21 @@ Last change:    00/00/00
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
 	});
+
+	$(window).on("scroll", function() {
+		if ($(this).scrollTop() > 200) {
+			$('.st-scrollup').fadeIn();
+		} else {
+			$('.st-scrollup').fadeOut();
+		}
+	});
+	$('.st-scrollup').on("click", function()  {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+
 	gsap.registerPlugin(ScrollTrigger);
 	
 	// Animation
@@ -127,7 +142,57 @@ Last change:    00/00/00
 		startVisible:true,
 	});
 
+	const menuItems = document.querySelectorAll('#main-nav > li');
+	let originalActive = document.querySelector('#main-nav > li.active');
+	menuItems.forEach(li => {
+		li.addEventListener('mouseenter', () => {
+			menuItems.forEach(item => item.classList.remove('active'));
+			li.classList.add('active');
+		});
+	});
+	document.querySelector('#main-nav').addEventListener('mouseleave', () => {
+		menuItems.forEach(item => item.classList.remove('active'));
+		originalActive.classList.add('active');
+	});
 
+	$('.search_btn_toggle').on('click', function() {
+		$('.overlay, .search_box_active').addClass('active');
+	});
+	$('.overlay, .search_box_close').on('click', function() {
+		$('.search_box_active').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+	jQuery(document).ready(function (o) {
+		0 < o(".navSidebar-button").length &&
+		o(".navSidebar-button").on("click", function (e) {
+			e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive");
+		}),
+		0 < o(".close-side-widget").length &&
+		o(".close-side-widget").on("click", function (e) {
+			e.preventDefault(), o(".info-group").removeClass("isActive");
+		}),
+		o(".xs-sidebar-widget").on("click", function (e) {
+			e.stopPropagation();
+		})
+	});
+	if($('.st-split-1').length) {
+		var txtSplit = $('.st-split-1');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		});
+	}
+	if($('.st-split-2').length) {
+		var txtSplit = $('.st-split-2');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines,words",
+				linesClass: "split-line"
+			});
+		});
+	}
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -138,15 +203,59 @@ Last change:    00/00/00
 				preloader.classList.add("preloaded");
 				setTimeout(function () {
 					preloader.remove();
-				}, 1000 ) ;
+				}, 1000 ) ; 
 
 			}
 			setTimeout(function() {
-				
+				var swiper2 = new Swiper(".st-hero-slider", {
+					loop: true,
+					spaceBetween: 0,
+					speed: 1000,
+					slidesPerView: 1,
+					effect: "fade",
+					autoplay: {
+						enabled: true,
+						delay: 5000
+					},
+				}); 
 			}, 700);
 		})		
 	});
-	
+	if($('.tx-split-text').length) {
+		var st = jQuery(".tx-split-text");
+		if(st.length == 0) return;
+		gsap.registerPlugin(SplitText);
+		st.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			gsap.set(el, { perspective: 400 });
+			if( jQuery(el).hasClass('split-in-up') ){
+				gsap.set(el.split.chars, {
+					opacity: 0,
+					x: 15,
+					ease: "back.out",
+				});
+			}
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+				},
+				x: "0",
+				y: "0",
+				rotateX: "0",
+				rotationX: "0",
+				color: 'inherit',
+				webkitTextStroke: "0px white",
+				scale: 1,
+				opacity: 1,
+				duration: .5, 
+				stagger: 0.02,
+			});
+		});
+	};
 	if ($('.st-spon-slider').length > 0 ) {
 		var slider = new Swiper('.st-spon-slider', {
 			spaceBetween: 0,
@@ -240,5 +349,122 @@ Last change:    00/00/00
 	$(window).on("load",function(){
 		$(".content").mCustomScrollbar();
 	});
+
+	gsap.utils.toArray(' .rotate_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 80%",
+				end: "top 10%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, rotate: -180})
+	});
+
+	gsap.utils.toArray(' .left_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 80%",
+				end: "top 10%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, x: "300"})
+	});
+
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 90%",
+				end: "top 50%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, y: "300"})
+	});
+	gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 50%",
+				end: "top 20%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, y: "-300"})
+	});
+	gsap.utils.toArray(' .workp').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 70%",
+				end: "top 20%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'left'})
+		.from(el, {  scale: 1, marginLeft: "-40%"})
+	});
+
+	gsap.utils.toArray(".img-parallax").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		}); 
+		tl.from(image, {
+			yPercent: -30,
+			ease: "none",
+		}).to(image, {
+			yPercent: 30,
+			ease: "none",
+		}); 
+	});
+
+	if($('.ed-footer-1-menu').length) {
+		document.querySelector('.ed-footer-1-menu').addEventListener('click', function(event) {
+			const link = event.target.closest('li a');
+			if (!link) return;
+			event.preventDefault();
+			const dropdown = link.nextElementSibling;
+			if (!dropdown || !dropdown.classList.contains('has-dropdown')) return;
+			document.querySelectorAll('.has-dropdown').forEach(ul => {
+				if (ul !== dropdown) ul.style.display = 'none';
+			});
+			dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+		});
+	}
+
 
 })(jQuery);

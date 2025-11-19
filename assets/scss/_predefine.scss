@@ -95,6 +95,11 @@ body::-webkit-scrollbar-thumb {
 	color: var(--st-title-color);
 	font-family: var(--st-heading);
 }
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
 #preloader { 
 	position: fixed; 
 	left: 0;
@@ -111,12 +116,27 @@ body::-webkit-scrollbar-thumb {
 		text-align: center;
 		position: absolute;
 		transform: translateY(-50%);
-		img {
-			animation: TXTImgIn 1500ms ease-in-out infinite;
-		}
+		animation: float 3s ease-in-out infinite;
 	}
 }
-
+.st-scrollup {
+	color: #fff;
+	width: 50px;
+	right: 20px;
+	z-index: 5;
+	height: 50px;
+	bottom: 20px;
+	display: none;
+	font-size: 16px;
+	position: fixed;
+	font-weight: 700;
+	line-height: 50px;
+	border-radius: 10px;
+	background: var(--st-prime-c);
+	&:hover {
+		color: #fff;
+	}
+}
 [data-background] {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -222,6 +242,7 @@ a {
 	list-style: none;
 	padding: 0;
 	z-index: 1;
+	display: flex;
 }
 .over-hidden,
 .split-line {
@@ -263,17 +284,32 @@ a {
 .st-btn {
 	display: inline-block;
 	a {
+		z-index: 1;
 		gap: 16px;
 		color: #fff;
 		font-size: 16px;
 		display: flex;
+		overflow: hidden;
 		font-weight: 600;
 		align-items: center;
 		border-radius: 6px;
+		position: relative;
 		justify-content: center;
 		padding: 10px 10px 10px 20px;
 		font-family: var(--st-heading);
 		background-color: var(--st-prime-c);
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 0%;
+			height: 100%;
+			content: '';
+			border-radius: 6px;
+			position: absolute;
+			transition: all 400ms ease-in-out;
+			background-color: var(--st-prime-c);
+		}
 		i {
 			width: 32px;
 			height: 32px;
@@ -282,11 +318,21 @@ a {
 			align-items: center;
 			justify-content: center;
 			background-color: #fff;
+			transition: all 500ms ease-in-out;
+		}
+		&:hover {
+			color: #fff;
+			&:before {
+				width: 100%;
+			}
 		}
 	}
 	&:is(.ver_2) {
 		a {
 			background-color: var(--st-title-color);
+			&:before {
+				background-color: var(--st-prime-c);
+			}
 		}
 	}
 }

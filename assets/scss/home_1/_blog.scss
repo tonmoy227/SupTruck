@@ -1,6 +1,19 @@
 .st-blog-sec {
+	z-index: 1;
 	.st-sec-title {
 		max-width: 730px;
+	}
+	.st-blg-shape {
+		top: 0;
+		right: 85px;
+		z-index: -1;
+	}
+	.st-btn {
+		a {
+			&:before {
+				background-color: var(--st-title-color);
+			}
+		}
 	}
 }
 .st-blog-item {
