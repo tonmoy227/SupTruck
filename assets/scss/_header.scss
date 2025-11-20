@@ -377,16 +377,16 @@
 				font-weight: 600;
 				position: relative;
 				text-align: center;
-				font-family: 'Font Awesome 5 Free';
 				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
 					display: none;
 				}
 				&:before {
-					top: -2px;
-					right: 5px;
+					top: -3px;
+					right: 8px;
 					font-size: 15px;
 					content: "\f107";
 					position: absolute;
+					font-family: 'Font Awesome 5 Free';
 					color: var(--st-prime-c);
 				}
 				select {

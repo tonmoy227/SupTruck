@@ -105,6 +105,7 @@
 		border: 1px solid rgba(15, 49, 58, 0.16);
 		position: relative;
 		img {
+			filter: grayscale(1);
 			transition: all 500ms ease-in-out;
 		}
 		&:before,
@@ -126,6 +127,7 @@
 	}
 	&:hover {
 		img {
+			filter: grayscale(0);
 			transform: scale(1.1);
 		}
 	}
